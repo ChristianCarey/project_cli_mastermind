@@ -1,19 +1,3 @@
-# set up game and board (human as codebreaker) -- mastermind makes a board and players
-
-# start game -- mastermind
-# set up code -- player
-# each turn: -- mastermind
-  # render board -- board
-  # get player guess -- player
-  # give feedback -- board
-  # check for game over -- board
-    # check for victory -- board
-    # check for loss -- board
-    # new turn if game not over -- mastermind
-# output results -- mastermind??
-# play again? -- mastermind
- 
-
 class Mastermind
 	CHOICES = %w(A B C D E F)
 
@@ -26,7 +10,6 @@ class Mastermind
     role = get_player_role
     set_players(role)
 		@board.code = @code_maker.get_input
-		puts @board.code
 		loop do
 			@board.render
 			@board.add_choice(@code_breaker.get_input)

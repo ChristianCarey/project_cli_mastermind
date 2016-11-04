@@ -1,5 +1,5 @@
 class ComputerPlayer < Player
-
+  
   def get_input
   	code = []
     4.times do 
